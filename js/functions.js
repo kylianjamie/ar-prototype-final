@@ -146,6 +146,7 @@ function toThirdIntro(){
 let isTouched = false;
 function removeIntro() {
     console.log('removeIntro function triggered');
+    console.log('isTouched is ' + isTouched);
     if (isTouched == false){
         introStatus = 3;
         isTouched = true;
