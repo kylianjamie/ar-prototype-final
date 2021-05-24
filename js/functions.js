@@ -138,7 +138,6 @@ function toThirdIntro(){
             }, 600);
         
             setTimeout(function() {
-                console.log('removeIntro should trigger now');
                 removeIntro();
             }, 5000)
     }
@@ -146,8 +145,6 @@ function toThirdIntro(){
 
 let isTouched = false;
 function removeIntro() {
-    console.log('removeIntro function triggered');
-    console.log('isTouched is ' + isTouched);
     if (isTouched == false){
         introStatus = 3;
         isTouched = true;
@@ -181,9 +178,13 @@ function closeModal() {
 function openSimilar() {
     document.getElementById('similar-products').classList.remove("hidden");
     document.getElementById('similar-products').classList.remove("opacity-0")
+    introTxt.classList.add("hidden");
+    document.getElementById('controls').classList.add("hidden");
 }
 
 function closeSimilar() {
     document.getElementById('similar-products').classList.add("opacity-0");
     document.getElementById('similar-products').classList.add("hidden");
+    introTxt.classList.remove("hidden");
+    document.getElementById('controls').classList.remove("hidden");
 }
