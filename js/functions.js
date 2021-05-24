@@ -180,7 +180,7 @@ function closeModal() {
 //similar products
 function openSimilar() {
     document.getElementById('similar-products').classList.remove("hidden");
-    document.getElementById('similar-products').classList.remove("opacity-0");
+    document.getElementById('similar-products').style.opacity = 1;
 }
 
 function closeSimilar() {

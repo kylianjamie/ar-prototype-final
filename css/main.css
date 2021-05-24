@@ -48,3 +48,7 @@
 #ar-icon{
     transform: translateY(2px);
 }
+
+#similar-products{
+    opacity: 0;
+}
