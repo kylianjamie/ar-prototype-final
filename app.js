@@ -86,7 +86,6 @@ class App{
 
         function loadSimilar() {
             if (self.chair.visible){
-                console.log('self.chair.visible is true');
                 self.chair.visible = false;
             }
             openSimilar();

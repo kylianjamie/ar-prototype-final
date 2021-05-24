@@ -114,7 +114,7 @@ function toSecondIntro(){
     introTxt.style.opacity = 0;
 
     setTimeout(function(){
-        introTxt.innerHTML = "Plaats het product";
+        introTxt.innerHTML = "Klik om het product te plaatsen";
         introTxt.style.opacity = 1;
     }, 600);
 }
@@ -176,15 +176,16 @@ function closeModal() {
 
 //similar products
 function openSimilar() {
+    document.getElementById('similar-products').style.opacity = 0;
     document.getElementById('similar-products').classList.remove("hidden");
-    document.getElementById('similar-products').classList.remove("opacity-0")
-    introTxt.classList.add("hidden");
-    document.getElementById('controls').classList.add("hidden");
+    document.getElementById('similar-products').style.opacity = 1;
+    introTxt.style.opacity = 0;
+    document.getElementById('controls').style.opacity = 0;
 }
 
 function closeSimilar() {
-    document.getElementById('similar-products').classList.add("opacity-0");
+    document.getElementById('similar-products').style.opacity = 0
+    document.getElementById('controls').style.opacity = 1;
+
     document.getElementById('similar-products').classList.add("hidden");
-    introTxt.classList.remove("hidden");
-    document.getElementById('controls').classList.remove("hidden");
 }
