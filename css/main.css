@@ -2,12 +2,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
-#cart-button{
-    background-color: #4EBEDF;
-}
-
 .active-fill:active{
     background-color: rgba(209, 213, 219, 1);
+}
+
+.active-fill-blue{
+    background-color: #4EBEDF;
 }
 
 .active-fill-blue:active{
