@@ -176,3 +176,12 @@ function closeModal() {
     document.getElementById('not-supported').classList.remove('flex');
     document.getElementById('not-supported').classList.add('hidden');
 }
+
+//similar products
+document.getElementById('similar-button').addEventListener("click", loadSimilar);
+
+function loadSimilar() {
+    console.log('load similar');
+    document.getElementById('similar-products').classList.remove("hidden");
+    document.getElementById('similar-products').classList.add("opacity-1");
+}

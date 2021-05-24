@@ -82,12 +82,6 @@ class App{
         const hammerHotspot = new Hammer(panHotspot);
         hammerHotspot.on('tap', onSelect);
 
-        document.getElementById('similar-button').addEventListener("click", loadSimilar);
-
-        function loadSimilar(){
-            console.log('load similar');
-        }
-
         this.controller = this.renderer.xr.getController( 0 );      
         this.scene.add( this.controller );
   
