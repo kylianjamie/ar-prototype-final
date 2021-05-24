@@ -103,14 +103,12 @@ function addToCart() {
 
 addCartBtn.addEventListener('click', addToCart);
 
-const placeBtn = document.getElementById('place-button');
 const introTxt = document.getElementById('intro-txt');
 var initSound  = new Audio('/assets/audio/init.mp3');
 let introStatus = 0;
 
 function toSecondIntro(){
     introStatus = 1;
-    placeBtn.classList.add('pulse-shadow');
     initSound.play();
 
     introTxt.style.opacity = 0;
@@ -133,7 +131,6 @@ function toThirdIntro(){
     if (firstTime == true){
             firstTime = false;
             introStatus = 2;
-            placeBtn.classList.remove('pulse-shadow');
             introTxt.style.opacity = 0;
             setTimeout(function(){
                 introTxt.innerHTML = "Swipe links of rechts om het product te draaien";
