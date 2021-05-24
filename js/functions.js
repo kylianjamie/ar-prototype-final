@@ -183,5 +183,6 @@ document.getElementById('similar-button').addEventListener("click", loadSimilar)
 function loadSimilar() {
     console.log('load similar');
     document.getElementById('similar-products').classList.remove("hidden");
-    document.getElementById('similar-products').style.opacity = 1;
+    document.getElementById('similar-products').classList.add("opacity-100");
+    // document.getElementById('similar-products').style.opacity = 1;
 }
