@@ -3,7 +3,7 @@
 }
 
 #cart-button{
-    background-color: #369dbd;
+    background-color: #4EBEDF;
 }
 
 .active-fill:active{
@@ -11,7 +11,7 @@
 }
 
 .active-fill-blue:active{
-    background-color: rgba(209, 213, 219, 1);
+    background-color: #369dbd;
 }
 
 .rounded-huge{
