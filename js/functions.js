@@ -176,7 +176,6 @@ function closeModal() {
 
 //similar products
 function openSimilar() {
-    document.getElementById('similar-products').style.opacity = 0;
     document.getElementById('similar-products').classList.remove("hidden");
     document.getElementById('similar-products').style.opacity = 1;
     introTxt.style.opacity = 0;
