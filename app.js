@@ -85,8 +85,9 @@ class App{
         document.getElementById('similar-button').addEventListener("click", loadSimilar);
 
         function loadSimilar() {
-            if (self.chair.visible == true){
-                self.chair.visible == false;
+            if (self.chair.visible){
+                console.log('self.chair.visible is true');
+                self.chair.visible = false;
             }
             openSimilar();
         }
@@ -94,8 +95,8 @@ class App{
         document.getElementById('close-similar').addEventListener("click", exitSimilar);
 
         function exitSimilar() {
-            if (self.chair.visible == false){
-                self.chair.visible == true;
+            if (!self.chair.visible){
+                self.chair.visible = true;
             }
             closeSimilar();
         }
