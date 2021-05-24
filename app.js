@@ -82,6 +82,15 @@ class App{
         const hammerHotspot = new Hammer(panHotspot);
         hammerHotspot.on('tap', onSelect);
 
+        document.getElementById('similar-button').addEventListener("click", loadSimilar);
+
+        function loadSimilar() {
+            if (self.chair.visible == true){
+                self.chair.visible == false;
+            }
+            uiAdjustments();
+        }
+
         this.controller = this.renderer.xr.getController( 0 );      
         this.scene.add( this.controller );
   

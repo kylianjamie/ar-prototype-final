@@ -178,9 +178,7 @@ function closeModal() {
 }
 
 //similar products
-document.getElementById('similar-button').addEventListener("click", loadSimilar);
-
-function loadSimilar() {
+function uiAdjustments() {
     document.getElementById('similar-products').classList.remove("hidden");
     document.getElementById('similar-products').classList.remove("opacity-0");
 }
