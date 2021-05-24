@@ -76,6 +76,7 @@ class App{
                 self.chair.position.setFromMatrixPosition( self.reticle.matrix );
                 self.chair.visible = true;
             }
+            console.log('onSelect function fired');
         }
 
         // document.getElementById('place-button').addEventListener("click", onSelect);
