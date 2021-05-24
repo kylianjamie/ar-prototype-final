@@ -158,6 +158,7 @@ function removeIntro() {
     }
 }
 
+
 function resetVariables() {
     firstTime = true;
     isTouched = false;
