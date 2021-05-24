@@ -179,7 +179,10 @@ function openSimilar() {
     document.getElementById('similar-products').classList.remove("hidden");
     introTxt.style.opacity = 0;
     document.getElementById('controls').style.opacity = 0;
-    document.getElementById('similar-products').style.opacity = 1;
+    
+    setTimeout(function(){
+        document.getElementById('similar-products').style.opacity = 1;
+    }, 500);
 }
 
 function closeSimilar() {
