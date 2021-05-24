@@ -129,6 +129,8 @@ function placeClick(){
 let firstTime = true;
 function toThirdIntro(){
     if (firstTime == true){
+        console.log('toThirdIntro triggered');
+        console.log('firstTime is ' + firstTime);
             firstTime = false;
             introStatus = 2;
             introTxt.style.opacity = 0;
@@ -145,8 +147,8 @@ function toThirdIntro(){
 
 let isTouched = false;
 function removeIntro() {
-    console.log('removeIntro function triggered');
-    console.log('isTouched is ' + isTouched);
+    // console.log('removeIntro function triggered');
+    // console.log('isTouched is ' + isTouched);
     if (isTouched == false){
         introStatus = 3;
         isTouched = true;
