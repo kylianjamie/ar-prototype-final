@@ -182,7 +182,7 @@ function openSimilar() {
 
     setTimeout(function(){
         document.getElementById('similar-products').style.opacity = 1;
-    }, 200);
+    }, 100);
 }
 
 function closeSimilar() {
