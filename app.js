@@ -118,7 +118,6 @@ class App{
         }, false);
 
         function rotateObject(){
-            removeIntro();
             if(self.chair){
                 self.chair.rotation.y += deltaX / 100;
             }
