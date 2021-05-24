@@ -88,7 +88,16 @@ class App{
             if (self.chair.visible == true){
                 self.chair.visible == false;
             }
-            uiAdjustments();
+            openSimilar();
+        }
+
+        document.getElementById('close-similar').addEventListener("click", exitSimilar);
+
+        function exitSimilar() {
+            if (self.chair.visible == false){
+                self.chair.visible == true;
+            }
+            closeSimilar();
         }
 
         this.controller = this.renderer.xr.getController( 0 );      

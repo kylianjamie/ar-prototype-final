@@ -178,7 +178,12 @@ function closeModal() {
 }
 
 //similar products
-function uiAdjustments() {
+function openSimilar() {
     document.getElementById('similar-products').classList.remove("hidden");
     document.getElementById('similar-products').classList.remove("opacity-0");
+}
+
+function closeSimilar() {
+    document.getElementById('similar-products').classList.add("opacity-0");
+    document.getElementById('similar-products').classList.add("hidden");
 }
