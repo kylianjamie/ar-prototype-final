@@ -187,5 +187,7 @@ function closeSimilar() {
     document.getElementById('similar-products').style.opacity = 0
     document.getElementById('controls').style.opacity = 1;
 
-    document.getElementById('similar-products').classList.add("hidden");
+    setTimeout(function(){
+        document.getElementById('similar-products').classList.add("hidden");
+    }, 500);
 }
