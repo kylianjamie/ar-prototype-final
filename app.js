@@ -78,7 +78,8 @@ class App{
             }
         }
 
-        document.getElementById('place-button').addEventListener("click", onSelect);
+        // document.getElementById('place-button').addEventListener("click", onSelect);
+        document.getElementById('pan-hotspot').addEventListener("click", onSelect);
 
         this.controller = this.renderer.xr.getController( 0 );      
         this.scene.add( this.controller );
