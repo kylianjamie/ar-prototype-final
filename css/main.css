@@ -3,10 +3,14 @@
 }
 
 #cart-button{
-    background-color: #4EBEDF;
+    background-color: #369dbd;
 }
 
 .active-fill:active{
+    background-color: rgba(209, 213, 219, 1);
+}
+
+.active-fill-blue:active{
     background-color: rgba(209, 213, 219, 1);
 }
 
