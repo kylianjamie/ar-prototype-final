@@ -177,7 +177,7 @@ function closeModal() {
 //similar products
 function openSimilar() {
     document.getElementById('similar-products').classList.remove("hidden");
-    introTxt.style.opacity = 0;
+    introTxt.style.visibility = 'hidden';
     document.getElementById('controls').style.opacity = 0;
 
     setTimeout(function(){
@@ -188,6 +188,7 @@ function openSimilar() {
 function closeSimilar() {
     document.getElementById('similar-products').style.opacity = 0
     document.getElementById('controls').style.opacity = 1;
+    introTxt.style.visibility = 'visible';
 
     setTimeout(function(){
         document.getElementById('similar-products').classList.add("hidden");
