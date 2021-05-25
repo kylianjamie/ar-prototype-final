@@ -94,7 +94,14 @@ class App{
         document.getElementById('close-similar').addEventListener("click", exitSimilar);
         document.getElementById('similar-hotspot').addEventListener("click", exitSimilar);
 
-        
+        const thumbWidth = screen.width - 96 + 'px';
+        console.log(thumbWidth);
+
+        const similarThumbs = document.getElementsByClassName('similar-item-thumb');
+            for(let i = 0; i < similarThumbs.length; i++) { 
+            similarThumbs[i].style.width = thumbWidth;
+            }
+
         function exitSimilar() {
             if (!self.chair.visible){
                 self.chair.visible = true;
