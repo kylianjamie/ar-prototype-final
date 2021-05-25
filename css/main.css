@@ -56,3 +56,7 @@
 .similar-item-thumb{
     flex: 0 0 auto;
 }
+
+.thumb-bg{
+    background-color: rgba(156, 163, 175, 0.8);
+}
