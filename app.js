@@ -92,7 +92,7 @@ class App{
         }
 
         document.getElementById('close-similar').addEventListener("click", exitSimilar);
-        document.getElementById('similar-products').addEventListener("click", exitSimilar);
+        document.getElementById('similar-hotspot').addEventListener("click", exitSimilar);
 
         function exitSimilar() {
             if (!self.chair.visible){
