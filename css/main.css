@@ -52,3 +52,7 @@
 #similar-products{
     opacity: 0;
 }
+
+.similar-item-thumb{
+    flex: 0 0 auto;
+}
