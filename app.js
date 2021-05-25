@@ -68,6 +68,8 @@ class App{
         this.hitTestSourceRequested = false;
         this.hitTestSource = null;
         
+        let chairPlaced = false;
+
         function onSelect() {
             if (self.chair===undefined) return;
             
@@ -75,6 +77,7 @@ class App{
                 placeClick();
                 self.chair.position.setFromMatrixPosition( self.reticle.matrix );
                 self.chair.visible = true;
+                chairPlaced = true;
             }
         }
 
@@ -95,7 +98,7 @@ class App{
         document.getElementById('similar-hotspot').addEventListener("click", exitSimilar);
 
         function exitSimilar() {
-            if (!self.chair.visible){
+            if (!self.chair.visible && chairPlaced){
                 self.chair.visible = true;
             }
             closeSimilar();
