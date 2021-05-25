@@ -95,7 +95,6 @@ class App{
         document.getElementById('similar-hotspot').addEventListener("click", exitSimilar);
 
         const thumbWidth = screen.width - 96 + 'px';
-        console.log(thumbWidth);
 
         const similarThumbs = document.getElementsByClassName('similar-item-thumb');
             for(let i = 0; i < similarThumbs.length; i++) { 
