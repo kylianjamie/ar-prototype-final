@@ -1,7 +1,7 @@
 import * as THREE from '/libs/three/three.module.js';
 import { GLTFLoader } from '/libs/three/jsm/GLTFLoader.js';
 import { RGBELoader } from '/libs/three/jsm/RGBELoader.js';
-import { LoadingBar } from '/libs/three/jsm/LoadingBar.js';
+// import { LoadingBar } from '/libs/three/jsm/LoadingBar.js';
 
 class App{
 	constructor(){
@@ -11,8 +11,8 @@ class App{
 
         container.classList.add('hidden');
         
-        this.loadingBar = new LoadingBar();
-        this.loadingBar.visible = false;
+        // this.loadingBar = new LoadingBar();
+        // this.loadingBar.visible = false;
 
 		this.assetsPath = '/assets/';
         
@@ -231,7 +231,7 @@ class App{
         const self = this;
 
         
-        this.loadingBar.visible = true;
+        // this.loadingBar.visible = true;
 		
 		// Load glTF resource
 		loader.load(
@@ -249,14 +249,14 @@ class App{
                     
                 }
                 
-                self.loadingBar.visible = false;
+                // self.loadingBar.visible = false;
                 
                 self.renderer.setAnimationLoop( self.render.bind(self) );
 			},
 			// called while loading is progressing
 			function ( xhr ) {
 
-				self.loadingBar.progress = (xhr.loaded / xhr.total);
+				// self.loadingBar.progress = (xhr.loaded / xhr.total);
 				
 			},
 			// called when loading has errors
