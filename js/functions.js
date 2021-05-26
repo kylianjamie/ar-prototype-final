@@ -194,3 +194,4 @@ function closeSimilar() {
         document.getElementById('similar-products').classList.add("hidden");
     }, 500);
 }
+

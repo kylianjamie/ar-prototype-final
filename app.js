@@ -111,6 +111,12 @@ class App{
             similarThumbs[i].style.width = thumbWidth;
             }
 
+
+        //clickable card check
+        for (let i = 0; i < similarThumbs.length; i++){
+            similarThumbs[i].addEventListener("click", console.log(this));
+        }
+
         this.controller = this.renderer.xr.getController( 0 );      
         this.scene.add( this.controller );
   
