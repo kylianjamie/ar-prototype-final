@@ -222,4 +222,10 @@ function changeCardOrder(item) {
     newChair = true;
 
     window.app.showChair(item);
+
+    const productNames = ['Topform Fauteuil', 'Huts stoeltje', 'Dikke sofa'];
+    const productPrices = ['499,00', '259,00', '999,95'];
+
+    document.getElementById('product-name').innerHTML = productNames[item];
+    document.getElementById('product-price').innerHTML = productPrices[item];
 }
