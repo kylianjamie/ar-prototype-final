@@ -284,6 +284,8 @@ class App{
 
             document.getElementById("ui").style.display = "none";
             resetVariables();
+
+            exitSimilar();
             
             self.renderer.setAnimationLoop( null );
 
