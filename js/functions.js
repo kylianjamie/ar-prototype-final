@@ -212,5 +212,5 @@ function changeCardOrder(item) {
         }
 
     cardInnerTexts[item].classList.add('text-gray-400');
-    cardInnerTexts[i].innerHTML = 'Geselecteerd';
+    cardInnerTexts[item].innerHTML = 'Geselecteerd';
 }
