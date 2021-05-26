@@ -115,7 +115,7 @@ class App{
         //clickable card check
         for(let i = 0; i < similarThumbs.length; i++) { 
             similarThumbs[i].addEventListener("click", function() {
-                console.log('huts ' + i);
+                changeCardOrder(i);
             });
             }
 

@@ -195,3 +195,13 @@ function closeSimilar() {
     }, 500);
 }
 
+//change card order on click
+const similarCards = document.getElementsByClassName('similar-item-thumb');
+
+function changeCardOrder(item) {
+    for(let i = 0; i < similarCards.length; i++) { 
+        similarCards[i].style.order = 2;
+        }
+        
+    similarCards[item].style.order = 1;
+}
