@@ -206,6 +206,9 @@ class App{
                     self.chair.visible = false; 
                 }
                 
+                if(newChair){
+                    self.chair.position.setFromMatrixPosition( self.reticle.matrix );
+                }
                 
                 self.loadingBar.visible = false;
                 
