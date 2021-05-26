@@ -118,6 +118,7 @@ class App{
                 lastChairLocation = self.chair.matrix;
                 self.scene.remove(self.chair);
                 changeCardOrder(i);
+                exitSimilar();
             });
             }
 
