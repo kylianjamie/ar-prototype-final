@@ -88,8 +88,10 @@ class App{
         document.getElementById('similar-button').addEventListener("click", loadSimilar);
 
         function loadSimilar() {
-            if (self.chair.visible){
-                self.chair.visible = false;
+            if (self.chair){
+                if (self.chair.visible){
+                    self.chair.visible = false;
+                }
             }
             openSimilar();
         }
