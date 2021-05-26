@@ -88,9 +88,9 @@ class App{
         document.getElementById('similar-button').addEventListener("click", loadSimilar);
 
         function loadSimilar() {
-            if (self.chair.visible){
-                self.chair.visible = false;
-            }
+            // if (self.chair.visible){
+            //     self.chair.visible = false;
+            // }
             openSimilar();
         }
 
@@ -98,9 +98,9 @@ class App{
         document.getElementById('similar-hotspot').addEventListener("click", exitSimilar);
 
         function exitSimilar() {
-            if (!self.chair.visible && chairPlaced){
-                self.chair.visible = true;
-            }
+            // if (!self.chair.visible && chairPlaced){
+            //     self.chair.visible = true;
+            // }
             closeSimilar();
         }
 
@@ -116,6 +116,7 @@ class App{
         for(let i = 0; i < similarThumbs.length; i++) { 
             similarThumbs[i].addEventListener("click", function() {
                 changeCardOrder(i);
+                self.scene.remove(self.chair);
             });
             }
 
