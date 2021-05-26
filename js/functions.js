@@ -104,6 +104,7 @@ function addToCart() {
 addCartBtn.addEventListener('click', addToCart);
 
 const introTxt = document.getElementById('intro-txt');
+const loaderAni = document.getElementById('loader-ani');
 var initSound  = new Audio('/assets/audio/init.mp3');
 let introStatus = 0;
 
@@ -112,6 +113,7 @@ function toSecondIntro(){
     initSound.play();
 
     introTxt.style.opacity = 0;
+    loaderAni.style.opacity = 0;
 
     setTimeout(function(){
         introTxt.innerHTML = "Klik om het product te plaatsen";
@@ -178,6 +180,7 @@ function closeModal() {
 function openSimilar() {
     document.getElementById('similar-products').classList.remove("hidden");
     introTxt.style.visibility = 'hidden';
+    loaderAni.style.visibility = 'hidden';
     document.getElementById('controls').style.opacity = 0;
 
     setTimeout(function(){
@@ -191,6 +194,7 @@ function closeSimilar() {
     setTimeout(function(){
         document.getElementById('controls').style.opacity = 1;
         introTxt.style.visibility = 'visible';
+        loaderAni.style.visibility = 'visible';
     }, 100);
 
     setTimeout(function(){
