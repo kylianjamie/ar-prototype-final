@@ -115,12 +115,8 @@ class App{
         //clickable card check
         for(let i = 0; i < similarThumbs.length; i++) { 
             similarThumbs[i].addEventListener("click", function() {
-                changeCardOrder(i);
                 self.scene.remove(self.chair);
-
-                setTimeout(function(){
-                    this.showChair();
-                }, 1000);
+                changeCardOrder(i);
             });
             }
 

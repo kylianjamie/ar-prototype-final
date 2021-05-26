@@ -213,5 +213,8 @@ function changeCardOrder(item) {
 
     cardInnerTexts[item].classList.add('text-gray-400');
     cardInnerTexts[item].innerHTML = 'Geselecteerd';
-    
+
+    setTimeout(function(){
+        window.app.showChair();
+    }, 1000);
 }
