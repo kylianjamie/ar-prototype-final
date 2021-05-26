@@ -200,21 +200,32 @@ class App{
 
         // loader
         const manager = new THREE.LoadingManager();
-        manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
-            console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
-        };
 
-        manager.onLoad = function ( ) {
-            console.log( 'Loading complete!');
-        };
+        if (newChair){
+            manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+                // console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+                loaderAni.style.visibility = 'visible';
+                loaderAni.style.opacity = 1;
+            };
+    
+            manager.onLoad = function ( ) {
+                // console.log( 'Loading complete!');
+                loaderAni.style.opacity = 0;
 
-        manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
-            console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
-        };
+                setTimeout(function(){
+                    loaderAni.style.visibility = 'hidden';
+                }, 500);
+            };
+    
+            // manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+            //     console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+            // };
+    
+            manager.onError = function ( url ) {
+                console.log( 'There was an error loading ' + url );
+            };
+        }
 
-        manager.onError = function ( url ) {
-            console.log( 'There was an error loading ' + url );
-        };
 
         const loader = new GLTFLoader(manager).setPath(this.assetsPath);
         const self = this;
