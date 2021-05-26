@@ -117,6 +117,10 @@ class App{
             similarThumbs[i].addEventListener("click", function() {
                 changeCardOrder(i);
                 self.scene.remove(self.chair);
+
+                setTimeout(function(){
+                    showChair();
+                }, 1000);
             });
             }
 
