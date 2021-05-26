@@ -217,7 +217,6 @@ function changeCardOrder(item) {
     cardInnerTexts[item].innerHTML = 'Geselecteerd';
     
     newChair = true;
-    setTimeout(function(){
-        window.app.showChair();
-    }, 1000);
+
+    showChair(item);
 }

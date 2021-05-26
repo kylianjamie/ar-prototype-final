@@ -88,9 +88,9 @@ class App{
         document.getElementById('similar-button').addEventListener("click", loadSimilar);
 
         function loadSimilar() {
-            // if (self.chair.visible){
-            //     self.chair.visible = false;
-            // }
+            if (self.chair.visible){
+                self.chair.visible = false;
+            }
             openSimilar();
         }
 
@@ -98,9 +98,9 @@ class App{
         document.getElementById('similar-hotspot').addEventListener("click", exitSimilar);
 
         function exitSimilar() {
-            // if (!self.chair.visible && chairPlaced){
-            //     self.chair.visible = true;
-            // }
+            if (!self.chair.visible && chairPlaced){
+                self.chair.visible = true;
+            }
             closeSimilar();
         }
 
@@ -188,7 +188,7 @@ class App{
         } );
     }
     
-	showChair(){
+	showChair(chair){
         if (!newChair){
             this.initAR();
         }
@@ -200,7 +200,7 @@ class App{
 		
 		// Load glTF resource
 		loader.load(
-			`armchair.glb`,
+			chair + `.glb`,
 			function ( gltf ) {
 				self.scene.add( gltf.scene );
                 self.chair = gltf.scene;
