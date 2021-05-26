@@ -100,8 +100,10 @@ class App{
         document.getElementById('similar-hotspot').addEventListener("click", exitSimilar);
 
         function exitSimilar() {
-            if (!self.chair.visible && chairPlaced){
-                self.chair.visible = true;
+            if (self.chair){
+                if (!self.chair.visible && chairPlaced){
+                    self.chair.visible = true;
+                }
             }
             closeSimilar();
         }
