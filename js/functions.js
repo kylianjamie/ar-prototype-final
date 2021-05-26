@@ -118,6 +118,7 @@ function toSecondIntro(){
     setTimeout(function(){
         introTxt.innerHTML = "Klik om het product te plaatsen";
         introTxt.style.opacity = 1;
+        loaderAni.classList.add('hidden');
     }, 600);
 }
 
