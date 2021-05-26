@@ -228,11 +228,13 @@ function changeCardOrder(item) {
 
     window.app.showChair(item);
 
-    const productNames = ['Topform Fauteuil', 'Huts stoeltje', 'Dikke sofa'];
-    const productPrices = ['499,00', '259,00', '999,95'];
+    const productNames = ['Topform Fauteuil', 'Profijt Meubel Fauteuil', 'vtwonen Fauteuil'];
+    const productPrices = ['499,00', '469,00', '349,00'];
+    const productMaterial = ['Stof', 'Leer', 'Stof'];
 
     document.getElementById('product-name').innerHTML = productNames[item];
     document.getElementById('product-price').innerHTML = productPrices[item];
+    document.getElementById('product-material').innerHTML = productMaterial[item];
 
     document.getElementById('cart-feature-img').src = "/img/" + item + ".png";
 }
