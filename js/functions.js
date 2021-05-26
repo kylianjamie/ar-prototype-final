@@ -197,11 +197,20 @@ function closeSimilar() {
 
 //change card order on click
 const similarCards = document.getElementsByClassName('similar-item-thumb');
+const cardInnerTexts = document.getElementsByClassName('card-inner-text');
 
 function changeCardOrder(item) {
     for(let i = 0; i < similarCards.length; i++) { 
         similarCards[i].style.order = 2;
         }
-        
+
     similarCards[item].style.order = 1;
+
+    for(let i = 0; i < cardInnerTexts.length; i++) { 
+        cardInnerTexts[i].classList.remove('text-gray-400');
+        cardInnerTexts[i].innerHTML = 'Selecteren';
+        }
+
+    cardInnerTexts[item].classList.add('text-gray-400');
+    cardInnerTexts[i].innerHTML = 'Geselecteerd';
 }
