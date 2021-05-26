@@ -1,7 +1,6 @@
 import * as THREE from '/libs/three/three.module.js';
 import { GLTFLoader } from '/libs/three/jsm/GLTFLoader.js';
 import { RGBELoader } from '/libs/three/jsm/RGBELoader.js';
-// import { LoadingBar } from '/libs/three/jsm/LoadingBar.js';
 
 class App{
 	constructor(){
@@ -11,9 +10,6 @@ class App{
 
         container.classList.add('hidden');
         
-        // this.loadingBar = new LoadingBar();
-        // this.loadingBar.visible = false;
-
 		this.assetsPath = '/assets/';
         
 		this.camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 20 );
@@ -198,18 +194,16 @@ class App{
             this.initAR();
         }
 
-        // loader
+        // show css loader when assets are loading
         const manager = new THREE.LoadingManager();
 
         if (newChair){
             manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
-                // console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
                 loaderAni.style.visibility = 'visible';
                 loaderAni.style.opacity = 1;
             };
     
             manager.onLoad = function ( ) {
-                // console.log( 'Loading complete!');
                 loaderAni.style.opacity = 0;
 
                 setTimeout(function(){
@@ -229,9 +223,6 @@ class App{
 
         const loader = new GLTFLoader(manager).setPath(this.assetsPath);
         const self = this;
-
-        
-        // this.loadingBar.visible = true;
 		
 		// Load glTF resource
 		loader.load(
@@ -249,14 +240,13 @@ class App{
                     
                 }
                 
-                // self.loadingBar.visible = false;
                 
                 self.renderer.setAnimationLoop( self.render.bind(self) );
 			},
+            
 			// called while loading is progressing
 			function ( xhr ) {
 
-				// self.loadingBar.progress = (xhr.loaded / xhr.total);
 				
 			},
 			// called when loading has errors
