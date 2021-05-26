@@ -112,12 +112,10 @@ class App{
             }
 
 
-        let lastChairLocation;
         //clickable card check
         for(let i = 0; i < similarThumbs.length; i++) { 
             similarThumbs[i].addEventListener("click", function() {
                 lastChairLocation = self.chair.matrix;
-                console.log(lastChairLocation);
                 self.scene.remove(self.chair);
                 changeCardOrder(i);
             });
@@ -212,7 +210,7 @@ class App{
                 }
                 
                 if(newChair){
-                    self.chair.position.setFromMatrixPosition( this.lastChairLocation );
+                    self.chair.position.setFromMatrixPosition( lastChairLocation );
                     
                 }
                 
