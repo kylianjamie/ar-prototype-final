@@ -187,8 +187,11 @@ function openSimilar() {
 
 function closeSimilar() {
     document.getElementById('similar-products').style.opacity = 0
-    document.getElementById('controls').style.opacity = 1;
-    introTxt.style.visibility = 'visible';
+    
+    setTimeout(function(){
+        document.getElementById('controls').style.opacity = 1;
+        introTxt.style.visibility = 'visible';
+    }, 100);
 
     setTimeout(function(){
         document.getElementById('similar-products').classList.add("hidden");
