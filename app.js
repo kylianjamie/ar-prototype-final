@@ -189,7 +189,7 @@ class App{
         } );
     }
     
-	showChair(chair){
+	showChair(model){
         if (!newChair){
             this.initAR();
         }
@@ -201,7 +201,7 @@ class App{
 		
 		// Load glTF resource
 		loader.load(
-			chair + `.glb`,
+			model + `.glb`,
 			function ( gltf ) {
 				self.scene.add( gltf.scene );
                 self.chair = gltf.scene;
