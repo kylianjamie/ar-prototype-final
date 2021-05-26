@@ -198,6 +198,7 @@ function closeSimilar() {
 //change card order on click
 const similarCards = document.getElementsByClassName('similar-item-thumb');
 const cardInnerTexts = document.getElementsByClassName('card-inner-text');
+let newChair = false;
 
 function changeCardOrder(item) {
     for(let i = 0; i < similarCards.length; i++) { 
@@ -213,7 +214,8 @@ function changeCardOrder(item) {
 
     cardInnerTexts[item].classList.add('text-gray-400');
     cardInnerTexts[item].innerHTML = 'Geselecteerd';
-
+    
+    newChair = true;
     setTimeout(function(){
         window.app.showChair();
     }, 1000);

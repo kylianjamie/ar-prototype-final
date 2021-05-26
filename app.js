@@ -202,7 +202,10 @@ class App{
 				self.scene.add( gltf.scene );
                 self.chair = gltf.scene;
         
-                self.chair.visible = false; 
+                if (!newChair){
+                    self.chair.visible = false; 
+                }
+                
                 
                 self.loadingBar.visible = false;
                 
