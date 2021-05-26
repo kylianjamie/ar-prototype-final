@@ -113,9 +113,11 @@ class App{
 
 
         //clickable card check
-        function logHuts(item) {
-            console.log('huts ' + item);
-        }
+        for(let i = 0; i < similarThumbs.length; i++) { 
+            similarThumbs[i].addEventListener("click", function() {
+                console.log('huts ' + i);
+            });
+            }
 
         this.controller = this.renderer.xr.getController( 0 );      
         this.scene.add( this.controller );
