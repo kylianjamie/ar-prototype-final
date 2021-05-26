@@ -119,7 +119,7 @@ class App{
                 self.scene.remove(self.chair);
 
                 setTimeout(function(){
-                    showChair();
+                    this.showChair();
                 }, 1000);
             });
             }
