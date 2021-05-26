@@ -233,4 +233,6 @@ function changeCardOrder(item) {
 
     document.getElementById('product-name').innerHTML = productNames[item];
     document.getElementById('product-price').innerHTML = productPrices[item];
+
+    document.getElementById('cart-feature-img').src = "/img/" + item + ".png";
 }
