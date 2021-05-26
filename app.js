@@ -191,7 +191,9 @@ class App{
     }
     
 	showChair(){
-        this.initAR();
+        if (!newChair){
+            this.initAR();
+        }
         
 		const loader = new GLTFLoader( ).setPath(this.assetsPath);
         const self = this;
@@ -210,7 +212,7 @@ class App{
                 }
                 
                 if(newChair){
-                    self.chair.position.setFromMatrixPosition( self.reticle.matrix );
+                    self.chair.position.setFromMatrixPosition( this.lastChairLocation );
                     
                 }
                 
