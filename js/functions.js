@@ -218,5 +218,5 @@ function changeCardOrder(item) {
     
     newChair = true;
 
-    showChair(item);
+    window.app.showChair(item);
 }
