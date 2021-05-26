@@ -230,7 +230,7 @@ function changeCardOrder(item) {
 
     const productNames = ['Topform Fauteuil', 'Profijt Meubel Fauteuil', 'vtwonen Fauteuil'];
     const productPrices = ['499,00', '469,00', '349,00'];
-    const productMaterial = ['Stof', 'Leer', 'Stof'];
+    const productMaterial = ['Stof', 'Leer', 'Stof/Kunststof'];
 
     document.getElementById('product-name').innerHTML = productNames[item];
     document.getElementById('product-price').innerHTML = productPrices[item];
