@@ -228,14 +228,6 @@ function changeCardOrder(item) {
 
     window.app.showChair(item);
 
-    // const productNames = ['Topform Fauteuil', 'Profijt Meubel Fauteuil', 'vtwonen Fauteuil'];
-    // const productPrices = ['499,00', '469,00', '349,00'];
-    // const productMaterial = ['Stof', 'Leer', 'Stof/Kunststof'];
-
-    // document.getElementById('product-name').innerHTML = productNames[item];
-    // document.getElementById('product-price').innerHTML = productPrices[item];
-    // document.getElementById('product-material').innerHTML = productMaterial[item];
-
     const productList = [
         {
             "name": "Topform Fauteuil",
