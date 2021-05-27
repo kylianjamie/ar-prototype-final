@@ -238,3 +238,5 @@ function changeCardOrder(item) {
 
     document.getElementById('cart-feature-img').src = "/img/" + item + ".png";
 }
+
+let isLoading = false;

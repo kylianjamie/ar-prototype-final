@@ -199,15 +199,16 @@ class App{
         const self = this;
 
         if (newChair){
-            manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+            manager.onStart = function () {
+                isLoading = true;
                 loaderAni.style.visibility = 'visible';
                 self.reticle.visible = false;
                 loaderAni.style.opacity = 1;
             };
     
             manager.onLoad = function ( ) {
+                isLoading = false;
                 loaderAni.style.opacity = 0;
-                self.reticle.visible = true;
 
                 setTimeout(function(){
                     loaderAni.style.visibility = 'hidden';
@@ -367,7 +368,10 @@ class App{
             const hit = hitTestResults[ 0 ];
             const pose = hit.getPose( referenceSpace );
 
-            this.reticle.visible = true;
+            if (!isLoading){
+                this.reticle.visible = true;
+            }
+
             this.reticle.matrix.fromArray( pose.transform.matrix );
 
         } else {
