@@ -213,9 +213,11 @@ let lastChairLocation;
 function changeCardOrder(item) {
     for(let i = 0; i < similarCards.length; i++) { 
         similarCards[i].style.order = 2;
+        similarCards[i].classList.remove('selected-item');
         }
 
     similarCards[item].style.order = 1;
+    similarCards[item].classList.add('selected-item');
 
     for(let i = 0; i < cardInnerTexts.length; i++) { 
         cardInnerTexts[i].classList.remove('text-gray-400');

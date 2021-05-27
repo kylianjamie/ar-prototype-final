@@ -130,12 +130,11 @@ class App{
             }
 
             function clickableCards(i){
-                if (similarThumbs[i].classList.contains('selected-item')){
-                    console.log('you clicked the item with selected item class');
+                if (!similarThumbs[i].classList.contains('selected-item')){
+                    lastChairLocation = self.chair.matrix;
+                    self.scene.remove(self.chair);
+                    changeCardOrder(i);
                 }
-                lastChairLocation = self.chair.matrix;
-                self.scene.remove(self.chair);
-                changeCardOrder(i);
                 exitSimilar();
             }
 
