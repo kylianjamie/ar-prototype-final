@@ -122,18 +122,18 @@ class App{
         //clickable card check
         function makeCardsClickable(){
             for(let i = 0; i < similarThumbs.length; i++) { 
-                similarThumbs[i].removeEventListener("click", saveChairLocation);
+                similarThumbs[i].removeEventListener("click", function() { saveChairLocation(i); } );
 
                 if (similarThumbs[i].classList.contains('selected-item')){
                     console.log('item ' + i + ' is selected');
                 };
-                similarThumbs[i].addEventListener("click", saveChairLocation);
+                similarThumbs[i].removeEventListener("click", function() { saveChairLocation(i); } );
                 }
         }
 
         makeCardsClickable();
 
-            function saveChairLocation() {
+            function saveChairLocation(i) {
                 lastChairLocation = self.chair.matrix;
                 self.scene.remove(self.chair);
                 changeCardOrder(i);
