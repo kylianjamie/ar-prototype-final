@@ -197,15 +197,18 @@ class App{
         // show css loader when assets are loading
         const manager = new THREE.LoadingManager();
 
+        const self = this;
+
         if (newChair){
             manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
                 loaderAni.style.visibility = 'visible';
-                this.reticle.visible = false;
+                self.reticle.visible = false;
                 loaderAni.style.opacity = 1;
             };
     
             manager.onLoad = function ( ) {
                 loaderAni.style.opacity = 0;
+                self.reticle.visible = true;
 
                 setTimeout(function(){
                     loaderAni.style.visibility = 'hidden';
@@ -223,7 +226,6 @@ class App{
 
 
         const loader = new GLTFLoader(manager).setPath(this.assetsPath);
-        const self = this;
 		
 		// Load glTF resource
 		loader.load(
