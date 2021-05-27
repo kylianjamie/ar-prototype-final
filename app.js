@@ -253,9 +253,15 @@ class App{
 				self.scene.add( gltf.scene );
                 self.chair = gltf.scene;
         
-                if (!newChair){
+                // if (!newChair){
+                //     self.chair.visible = false; 
+                // }
+
+                if (!chairPlaced){
                     self.chair.visible = false; 
                 }
+
+                self.chair.visible = false; 
                 
                 if(newChair){
                     self.chair.position.setFromMatrixPosition( lastChairLocation );
