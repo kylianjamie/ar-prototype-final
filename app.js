@@ -200,6 +200,7 @@ class App{
         if (newChair){
             manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
                 loaderAni.style.visibility = 'visible';
+                this.reticle.visible = false;
                 loaderAni.style.opacity = 1;
             };
     
