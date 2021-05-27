@@ -105,7 +105,9 @@ class App{
                 }
             }
 
-            blockReticle = false;
+            if (!isLoadingObject){
+                blockReticle = false;
+            }
             closeSimilar();
         }
 
@@ -205,6 +207,7 @@ class App{
 
         if (newChair){
             manager.onStart = function () {
+                isLoadingObject = true;
                 blockReticle = true;
                 loaderAni.style.visibility = 'visible';
                 self.reticle.visible = false;
@@ -212,6 +215,7 @@ class App{
             };
     
             manager.onLoad = function ( ) {
+                isLoadingObject = false;
                 blockReticle = false;
                 loaderAni.style.opacity = 0;
 
