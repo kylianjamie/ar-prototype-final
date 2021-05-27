@@ -121,12 +121,7 @@ class App{
 
         //clickable card check
         for(let i = 0; i < similarThumbs.length; i++) { 
-            similarThumbs[i].addEventListener("click", function() { clickableCards(i)
-                // lastChairLocation = self.chair.matrix;
-                // self.scene.remove(self.chair);
-                // changeCardOrder(i);
-                // exitSimilar();
-            });
+            similarThumbs[i].addEventListener("click", function() { clickableCards(i) });
             }
 
             function clickableCards(i){

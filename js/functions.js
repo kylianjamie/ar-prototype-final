@@ -211,21 +211,7 @@ let newChair = false;
 let lastChairLocation;
 
 function changeCardOrder(item) {
-    for(let i = 0; i < similarCards.length; i++) { 
-        similarCards[i].style.order = 2;
-        similarCards[i].classList.remove('selected-item');
-        }
-
-    similarCards[item].style.order = 1;
-    similarCards[item].classList.add('selected-item');
-
-    for(let i = 0; i < cardInnerTexts.length; i++) { 
-        cardInnerTexts[i].classList.remove('text-gray-400');
-        cardInnerTexts[i].innerHTML = 'Selecteren';
-        }
-
-    cardInnerTexts[item].classList.add('text-gray-400');
-    cardInnerTexts[item].innerHTML = 'Geselecteerd';
+    
     
     newChair = true;
 
@@ -255,6 +241,24 @@ function changeCardOrder(item) {
 
 
     document.getElementById('cart-feature-img').src = "/img/" + item + ".png";
+
+    setTimeout(function(){
+        for(let i = 0; i < similarCards.length; i++) { 
+            similarCards[i].style.order = 2;
+            similarCards[i].classList.remove('selected-item');
+            }
+    
+        similarCards[item].style.order = 1;
+        similarCards[item].classList.add('selected-item');
+    
+        for(let i = 0; i < cardInnerTexts.length; i++) { 
+            cardInnerTexts[i].classList.remove('text-gray-400');
+            cardInnerTexts[i].innerHTML = 'Selecteren';
+            }
+    
+        cardInnerTexts[item].classList.add('text-gray-400');
+        cardInnerTexts[item].innerHTML = 'Geselecteerd';
+    }, 500);
 }
 
 let blockReticle = false;
