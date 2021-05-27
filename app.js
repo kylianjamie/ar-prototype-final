@@ -127,7 +127,7 @@ class App{
                 if (similarThumbs[i].classList.contains('selected-item')){
                     console.log('item ' + i + ' is selected');
                 };
-                similarThumbs[i].removeEventListener("click", function() { saveChairLocation(i); } );
+                similarThumbs[i].addEventListener("click", function() { saveChairLocation(i); } );
                 }
         }
 
