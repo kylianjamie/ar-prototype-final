@@ -89,6 +89,8 @@ class App{
                     self.chair.visible = false;
                 }
             }
+
+            blockReticle = true;
             openSimilar();
         }
 
@@ -101,6 +103,8 @@ class App{
                     self.chair.visible = true;
                 }
             }
+
+            blockReticle = false;
             closeSimilar();
         }
 
@@ -200,14 +204,14 @@ class App{
 
         if (newChair){
             manager.onStart = function () {
-                isLoading = true;
+                blockReticle = true;
                 loaderAni.style.visibility = 'visible';
                 self.reticle.visible = false;
                 loaderAni.style.opacity = 1;
             };
     
             manager.onLoad = function ( ) {
-                isLoading = false;
+                blockReticle = false;
                 loaderAni.style.opacity = 0;
 
                 setTimeout(function(){
@@ -357,8 +361,6 @@ class App{
         const hitTestResults = frame.getHitTestResults( this.hitTestSource );
 
         if ( hitTestResults.length ) {
-
-            console.log(hitTestResults.length + 'hij zet hem steeds op true');
             
             if (introStatus == 0){
                 toSecondIntro();
@@ -368,7 +370,7 @@ class App{
             const hit = hitTestResults[ 0 ];
             const pose = hit.getPose( referenceSpace );
 
-            if (!isLoading){
+            if (!blockReticle){
                 this.reticle.visible = true;
             }
 

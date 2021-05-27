@@ -228,15 +228,38 @@ function changeCardOrder(item) {
 
     window.app.showChair(item);
 
-    const productNames = ['Topform Fauteuil', 'Profijt Meubel Fauteuil', 'vtwonen Fauteuil'];
-    const productPrices = ['499,00', '469,00', '349,00'];
-    const productMaterial = ['Stof', 'Leer', 'Stof/Kunststof'];
+    // const productNames = ['Topform Fauteuil', 'Profijt Meubel Fauteuil', 'vtwonen Fauteuil'];
+    // const productPrices = ['499,00', '469,00', '349,00'];
+    // const productMaterial = ['Stof', 'Leer', 'Stof/Kunststof'];
 
-    document.getElementById('product-name').innerHTML = productNames[item];
-    document.getElementById('product-price').innerHTML = productPrices[item];
-    document.getElementById('product-material').innerHTML = productMaterial[item];
+    // document.getElementById('product-name').innerHTML = productNames[item];
+    // document.getElementById('product-price').innerHTML = productPrices[item];
+    // document.getElementById('product-material').innerHTML = productMaterial[item];
+
+    const productList = [
+        {
+            "name": "Topform Fauteuil",
+            "price": "499,00",
+            "material": "Stof"
+          },
+          {
+            "name": "Profijt Meubel Fauteuil",
+            "price": "469,00",
+            "material": "Leer"
+          },
+          {
+            "name": "vtwonen Fauteuil",
+            "price": "349,00",
+            "material": "Stof/Kunststof"
+          },
+    ]
+
+    document.getElementById('product-name').innerHTML = productList[item].name;
+    document.getElementById('product-price').innerHTML = productList[item].price;
+    document.getElementById('product-material').innerHTML = productList[item].material;
+
 
     document.getElementById('cart-feature-img').src = "/img/" + item + ".png";
 }
 
-let isLoading = false;
+let blockReticle = false;
