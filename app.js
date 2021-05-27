@@ -120,20 +120,19 @@ class App{
 
 
         //clickable card check
-        function makeCardsClickable(){
-            for(let i = 0; i < similarThumbs.length; i++) { 
-                similarThumbs[i].removeEventListener("click", function() { saveChairLocation(i); } );
+        for(let i = 0; i < similarThumbs.length; i++) { 
+            similarThumbs[i].addEventListener("click", function() { clickableCards(i)
+                // lastChairLocation = self.chair.matrix;
+                // self.scene.remove(self.chair);
+                // changeCardOrder(i);
+                // exitSimilar();
+            });
+            }
 
+            function clickableCards(i){
                 if (similarThumbs[i].classList.contains('selected-item')){
-                    console.log('item ' + i + ' is selected');
-                };
-                similarThumbs[i].addEventListener("click", function() { saveChairLocation(i); } );
+                    console.log('you clicked the item with selected item class');
                 }
-        }
-
-        makeCardsClickable();
-
-            function saveChairLocation(i) {
                 lastChairLocation = self.chair.matrix;
                 self.scene.remove(self.chair);
                 changeCardOrder(i);
