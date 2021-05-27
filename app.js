@@ -196,7 +196,6 @@ class App{
 
         // show css loader when assets are loading
         const manager = new THREE.LoadingManager();
-
         const self = this;
 
         if (newChair){
@@ -226,6 +225,7 @@ class App{
 
 
         const loader = new GLTFLoader(manager).setPath(this.assetsPath);
+        
 		
 		// Load glTF resource
 		loader.load(
@@ -356,6 +356,8 @@ class App{
         const hitTestResults = frame.getHitTestResults( this.hitTestSource );
 
         if ( hitTestResults.length ) {
+
+            console.log(hitTestResults.length + 'hij zet hem steeds op true');
             
             if (introStatus == 0){
                 toSecondIntro();
