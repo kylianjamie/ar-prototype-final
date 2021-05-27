@@ -257,7 +257,7 @@ class App{
                 //     self.chair.visible = false; 
                 // }
 
-                if (!chairPlaced){
+                if (!this.chairPlaced){
                     self.chair.visible = false; 
                 }
 
