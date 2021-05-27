@@ -226,11 +226,14 @@ class App{
             manager.onLoad = function ( ) {
                 isLoadingObject = false;
                 blockReticle = false;
-                loaderAni.style.opacity = 0;
 
-                setTimeout(function(){
-                    loaderAni.style.visibility = 'hidden';
-                }, 500);
+                if(introStatus != 0){
+                    loaderAni.style.opacity = 0;
+
+                    setTimeout(function(){
+                        loaderAni.style.visibility = 'hidden';
+                    }, 500);
+                }
             };
     
             // manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
