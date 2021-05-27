@@ -200,9 +200,8 @@ function closeSimilar() {
 
     setTimeout(function(){
         document.getElementById('similar-products').classList.add("hidden");
+        document.getElementById('scroll-container').scrollLeft = 0;
     }, 500);
-
-    document.getElementById('scroll-container').scrollLeft = 0;
 }
 
 //change card order on click
