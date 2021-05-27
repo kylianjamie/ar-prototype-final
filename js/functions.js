@@ -199,8 +199,8 @@ function closeSimilar() {
     }, 100);
 
     setTimeout(function(){
-        document.getElementById('similar-products').classList.add("hidden");
         document.getElementById('scroll-container').scrollLeft = 0;
+        document.getElementById('similar-products').classList.add("hidden");
     }, 500);
 }
 
