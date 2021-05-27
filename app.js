@@ -120,13 +120,24 @@ class App{
 
 
         //clickable card check
-        for(let i = 0; i < similarThumbs.length; i++) { 
-            similarThumbs[i].addEventListener("click", function() {
+        function makeCardsClickable(){
+            for(let i = 0; i < similarThumbs.length; i++) { 
+                similarThumbs[i].removeEventListener("click", saveChairLocation);
+
+                if (similarThumbs[i].classList.contains('selected-item')){
+                    console.log('item ' + i + ' is selected');
+                };
+                similarThumbs[i].addEventListener("click", saveChairLocation);
+                }
+        }
+
+        makeCardsClickable();
+
+            function saveChairLocation() {
                 lastChairLocation = self.chair.matrix;
                 self.scene.remove(self.chair);
                 changeCardOrder(i);
                 exitSimilar();
-            });
             }
 
         this.controller = this.renderer.xr.getController( 0 );      

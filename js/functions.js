@@ -253,6 +253,8 @@ function changeCardOrder(item) {
 
 
     document.getElementById('cart-feature-img').src = "/img/" + item + ".png";
+
+    makeCardsClickable();
 }
 
 let blockReticle = false;
