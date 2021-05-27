@@ -64,7 +64,7 @@ class App{
         this.hitTestSourceRequested = false;
         this.hitTestSource = null;
         
-        let chairPlaced = false;
+        
 
         function onSelect() {
             if (self.chair===undefined) return;
@@ -257,7 +257,7 @@ class App{
                 //     self.chair.visible = false; 
                 // }
 
-                if (!this.chairPlaced){
+                if (!chairPlaced){
                     self.chair.visible = false; 
                 }
 

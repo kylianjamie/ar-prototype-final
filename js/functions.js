@@ -259,3 +259,4 @@ function changeCardOrder(item) {
 
 let blockReticle = false;
 let isLoadingObject = false;
+let chairPlaced = false;
