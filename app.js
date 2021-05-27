@@ -91,6 +91,7 @@ class App{
             }
 
             blockReticle = true;
+            self.reticle.visible = false;
             openSimilar();
         }
 
