@@ -263,8 +263,6 @@ class App{
                 if (!chairPlaced){
                     self.chair.visible = false; 
                 }
-
-                self.chair.visible = false; 
                 
                 if(newChair){
                     self.chair.position.setFromMatrixPosition( lastChairLocation );
