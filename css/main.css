@@ -61,7 +61,7 @@
     background-color: rgba(156, 163, 175, 0.8);
 }
 
-#add-cart-btn:focus{
+#add-cart-btn:focus, #ar-button, #detail-add-cart-btn, #update-cart, #to-register{
   outline: none;
 }
 
